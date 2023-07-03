@@ -1,7 +1,7 @@
 let number1 = '';
 let number2 = '';
 let operator = '';
-const btn = document.querySelectorAll('button');
+const numBtn = document.querySelectorAll('button');
 const display = document.querySelector('#display');
 const content = document.createElement('p');
 content.classList.add('content');
@@ -34,9 +34,20 @@ function divide(num1, num2){
     return num1 / num2
 }
 
-btn.forEach((button) => {
+numBtn.forEach((button) => {
     button.addEventListener('click', () => {
-        content.textContent = button.id
-        display.appendChild(content)
+        if (button.id == '1' ||
+        button.id == '2' ||
+        button.id == '3' ||
+        button.id == '4' ||
+        button.id == '5' ||
+        button.id == '6' ||
+        button.id == '7' ||
+        button.id == '8' ||
+        button.id == '9' ||
+        button.id == '0'){
+            content.textContent = button.id
+            display.appendChild(content)
+        }
     })
 })
