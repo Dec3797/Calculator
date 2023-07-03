@@ -1,6 +1,7 @@
 let number1 = '';
 let number2 = '';
 let operator = '';
+const btn = document.querySelectorAll('button')
 
 function operate (number1, operator, number2){
     if (operator == '+'){
@@ -29,3 +30,9 @@ function multiply(num1, num2){
 function divide(num1, num2){
     return num1 / num2
 }
+
+btn.forEach((button) => {
+    button.addEventListener('click', () => {
+        operate(button.id)
+    })
+})
