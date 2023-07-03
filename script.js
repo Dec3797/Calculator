@@ -5,6 +5,7 @@ const numBtn = document.querySelectorAll('button');
 const display = document.querySelector('#display');
 const content = document.createElement('p');
 content.classList.add('content');
+let displayValue = '';
 
 function operate (number1, operator, number2){
     if (operator == '+'){
@@ -48,6 +49,7 @@ numBtn.forEach((button) => {
         button.id == '0'){
             content.textContent = button.id
             display.appendChild(content)
+            displayValue = button.id
         }
     })
 })
