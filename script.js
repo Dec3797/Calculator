@@ -1,3 +1,9 @@
+const display = document.querySelector('#display');
+const displayValue = '';
+const numBtns = document.querySelector('#numberButtons');
+const opBtns = document.querySelector('opertaorButtons');
+const displayBtns = document.querySelector('#topButtons')
+
 function add(number1, number2){
     return number1 + number2
 }
@@ -25,3 +31,4 @@ function operate(number1, operand, number2){
         return divide(number1, number2)
     }
 }
+
